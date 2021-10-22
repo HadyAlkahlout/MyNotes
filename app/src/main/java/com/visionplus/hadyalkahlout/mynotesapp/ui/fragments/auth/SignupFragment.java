@@ -109,25 +109,25 @@ public class SignupFragment extends Fragment {
                     dialog.show();
                 } else {
                     boolean valid = true;
-                    if (!nameCheck(firstName.getText().toString())){
+                    if (!nameCheck(firstName.getText().toString())) {
                         progressDialog.dismiss();
                         body.setText(R.string.fname_wrong);
                         dialog.show();
                         valid = false;
                     }
-                    if (!nameCheck(lastName.getText().toString())){
+                    if (!nameCheck(lastName.getText().toString())) {
                         progressDialog.dismiss();
                         body.setText(R.string.lname_wrong);
                         dialog.show();
                         valid = false;
                     }
-                    if (!passCheck(password.getText().toString())){
+                    if (!passCheck(password.getText().toString())) {
                         progressDialog.dismiss();
                         body.setText(R.string.password_wrong);
                         dialog.show();
                         valid = false;
                     }
-                    if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
+                    if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
                         progressDialog.dismiss();
                         body.setText(getString(R.string.email_wrong));
                         dialog.show();
